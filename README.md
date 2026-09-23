@@ -18,7 +18,17 @@ npm run docs:build
 npm run docs:preview
 ```
 
-构建产物位于 `docs/.vitepress/dist`，可用于静态托管。若部署在子路径下，请先在 `docs/.vitepress/config.mts` 配置对应 `base`。
+构建产物位于 `docs/.vitepress/dist`。
+
+## GitHub Pages
+
+访问地址：[筑基·学习笔记](https://tiany-l.github.io/docs-note/)。
+
+推送到 `main` 后，`.github/workflows/deploy.yml` 会自动安装依赖、构建并发布站点。可在仓库 Actions 页面查看部署结果。
+
+GitHub Actions 构建时自动使用 `/docs-note/` 作为路径前缀，本地开发仍使用 `/`。页面使用 `.html` 链接，支持在 GitHub Pages 上直接访问和刷新笔记页。
+
+仓库 Settings → Pages → Source 需设为 **GitHub Actions**。如果更改仓库名，需要同步修改 `docs/.vitepress/config.mts` 中的部署路径。
 
 ## 目录
 
